@@ -1,43 +1,43 @@
 <?php
 
 /**
- * Plugin Name: Breakdance Custom Elements
- * Plugin URI: https://breakdance.com/
- * Description: Boilerplate plugin to save your custom elements created with Element Studio.
- * Author: Breakdance
- * Author URI: https://breakdance.com/
+ * Plugin Name: WinuSoft Elements for Breakdance
+ * Plugin URI: https://winusoft.co.uk/
+ * Description: Sweet elements for Breakdance Builder.
+ * Author: Phe Ledwell, WinuSoft Web Development
+ * Author URI: https://winusoft.co.uk/
  * License: GPLv2
  * Text Domain: breakdance
  * Domain Path: /languages/
  * Version: 0.0.1
  */
 
-namespace BreakdanceCustomElements;
+namespace WinuSoftCustomElements;
 
 use function Breakdance\Util\getDirectoryPathRelativeToPluginFolder;
 
 add_action('breakdance_loaded', function () {
     \Breakdance\ElementStudio\registerSaveLocation(
         getDirectoryPathRelativeToPluginFolder(__DIR__) . '/elements',
-        'BreakdanceCustomElements',
+        'WinuSoftCustomElements',
         'element',
-        'Custom Elements',
+        'WinuSoft Custom Elements',
         false
     );
 
     \Breakdance\ElementStudio\registerSaveLocation(
         getDirectoryPathRelativeToPluginFolder(__DIR__) . '/macros',
-        'BreakdanceCustomElements',
+        'WinuSoftCustomElements',
         'macro',
-        'Custom Macros',
+        'WinuSoft Custom Macros',
         false,
     );
 
     \Breakdance\ElementStudio\registerSaveLocation(
         getDirectoryPathRelativeToPluginFolder(__DIR__) . '/presets',
-        'BreakdanceCustomElements',
+        'WinuSoftCustomElements',
         'preset',
-        'Custom Presets',
+        'WinuSoft Custom Presets',
         false,
     );
 },
